@@ -1,0 +1,405 @@
+/* =========================
+   GENERAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f5f7fa;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    background: #111827;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #111827;
+    padding: 20px;
+    gap: 15px;
+}
+
+.nav-links.show {
+    display: flex;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    text-decoration: underline;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 5%;
+
+    background: linear-gradient(
+        135deg,
+        #1e3a8a,
+        #0f172a
+    );
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    display: inline-block;
+    background: #f59e0b;
+    color: #111827;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.about,
+.services,
+.faq-section,
+.contact-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.about h2,
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card-container {
+    display: grid;
+    gap: 20px;
+}
+
+.card,
+.service-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card h3,
+.service-card h2 {
+    margin-bottom: 12px;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.learn-more {
+    align-self: flex-start;
+    padding: 10px 16px;
+    border: none;
+    background: #1e3a8a;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.learn-more:hover {
+    background: #111827;
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header {
+    text-align: center;
+    padding: 60px 5%;
+    background: #1e3a8a;
+    color: white;
+}
+
+.page-header h1 {
+    font-size: 2.3rem;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    text-align: center;
+    padding: 60px 5%;
+    background: #e5e7eb;
+}
+
+.cta h2 {
+    margin-bottom: 10px;
+}
+
+.cta p {
+    margin-bottom: 25px;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq {
+    max-width: 800px;
+    margin: 15px auto;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 18px;
+    border: none;
+    background: #1e3a8a;
+    color: white;
+    text-align: left;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    background: white;
+    padding: 18px;
+}
+
+.faq-answer.show {
+    display: block;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    display: grid;
+    gap: 40px;
+}
+
+.contact-info {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.contact-info h2 {
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 12px;
+}
+
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: 3px solid #93c5fd;
+}
+
+.error {
+    color: #b91c1c;
+    display: block;
+    margin-top: 5px;
+}
+
+#formMessage {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    background: #111827;
+    color: white;
+    padding: 25px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 600px) {
+
+    .nav-links {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        padding: 0;
+        gap: 25px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        gap: 25px;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 1000px) {
+
+    .hero {
+        min-height: 75vh;
+        padding-left: 10%;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .services {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

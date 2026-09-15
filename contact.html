@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact TechCare Solutions.">
+    <title>TechCare Solutions | Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">TechCare</a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+<main>
+
+<section class="page-header">
+    <h1>Contact Us</h1>
+    <p>Have a question? Send us a message.</p>
+</section>
+
+<section class="contact-section">
+
+    <div class="contact-info">
+
+        <h2>Get in Touch</h2>
+
+        <p>
+            Our team is available to discuss your technology
+            and cybersecurity requirements.
+        </p>
+
+        <p><strong>Email:</strong> info@techcare.example</p>
+
+        <p><strong>Phone:</strong> 0400 123 456</p>
+
+        <p><strong>Location:</strong> Canberra, Australia</p>
+
+    </div>
+
+    <form id="contactForm">
+
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+            <small class="error" id="nameError"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <small class="error" id="emailError"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message</label>
+
+            <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Write your message"
+                required
+            ></textarea>
+
+            <small class="error" id="messageError"></small>
+        </div>
+
+        <button type="submit" class="btn">
+            Send Message
+        </button>
+
+        <p id="formMessage"></p>
+
+    </form>
+
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 TechCare Solutions. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
